@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shalva Janashvili — Digital Marketing Manager</title>
+<meta name="description" content="Shalva Janashvili — Digital Marketing Manager specializing in SEO, PPC, Google &amp; Meta Ads, and data-driven growth.">
+<style>
+  :root{
+    --bg:#0a0b10;
+    --bg-2:#0f1119;
+    --card:#141726;
+    --card-2:#181b2b;
+    --line:rgba(255,255,255,.08);
+    --txt:#e8eaf2;
+    --muted:#9aa0b5;
+    --faint:#6b7186;
+    --accent:#6c5ce7;
+    --accent-2:#00d2ff;
+    --accent-3:#ff4d8d;
+    --grad:linear-gradient(120deg,#6c5ce7,#00d2ff);
+    --grad-warm:linear-gradient(120deg,#ff4d8d,#6c5ce7);
+    --radius:16px;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--txt);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .accent-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+  .edit{
+    border-bottom:1px dashed var(--accent-3);
+    color:#ffb3cd;
+    cursor:help;
+  }
+
+  /* ===== Background glow ===== */
+  .bg-fx{position:fixed;inset:0;z-index:-1;overflow:hidden}
+  .orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5}
+  .orb.a{width:520px;height:520px;background:#6c5ce7;top:-160px;left:-120px}
+  .orb.b{width:480px;height:480px;background:#00d2ff;top:30%;right:-160px;opacity:.35}
+  .orb.c{width:420px;height:420px;background:#ff4d8d;bottom:-160px;left:20%;opacity:.28}
+
+  /* ===== Nav ===== */
+  nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(10,11,16,.6);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{font-weight:800;letter-spacing:.3px;font-size:1.05rem}
+  .brand span{color:var(--accent-2)}
+  .navlinks{display:flex;gap:28px;font-size:.92rem}
+  .navlinks a{color:var(--muted);transition:color .2s}
+  .navlinks a:hover{color:var(--txt)}
+  .nav-cta{padding:9px 18px;border-radius:999px;background:var(--grad);color:#fff;font-weight:600;font-size:.9rem}
+  .burger{display:none;background:none;border:0;color:var(--txt);font-size:1.5rem;cursor:pointer}
+  @media(max-width:760px){
+    .navlinks{display:none}
+    .burger{display:block}
+  }
+
+  /* ===== Hero ===== */
+  header.hero{position:relative;padding:96px 0 72px;text-align:center}
+  .eyebrow{display:inline-flex;gap:8px;align-items:center;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-2);border:1px solid var(--line);padding:7px 16px;border-radius:999px;background:rgba(255,255,255,.02);margin-bottom:26px}
+  .dot{width:8px;height:8px;border-radius:50%;background:#2ecc71;box-shadow:0 0 12px #2ecc71}
+  header.hero h1{font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.05;font-weight:850;letter-spacing:-.02em;margin-bottom:20px}
+  header.hero .role{font-size:clamp(1.05rem,2.4vw,1.4rem);color:var(--muted);max-width:640px;margin:0 auto 34px}
+  .hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{padding:14px 26px;border-radius:999px;font-weight:600;font-size:.98rem;transition:transform .2s,box-shadow .2s;border:1px solid transparent}
+  .btn.primary{background:var(--grad);color:#fff;box-shadow:0 8px 30px rgba(108,92,231,.35)}
+  .btn.primary:hover{transform:translateY(-2px);box-shadow:0 12px 38px rgba(108,92,231,.5)}
+  .btn.ghost{border-color:var(--line);color:var(--txt);background:rgba(255,255,255,.02)}
+  .btn.ghost:hover{border-color:var(--accent-2);transform:translateY(-2px)}
+
+  /* ===== Stats strip ===== */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:64px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px 18px;text-align:center}
+  .stat .num{font-size:1.9rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .stat .lbl{font-size:.82rem;color:var(--muted);margin-top:4px}
+  @media(max-width:680px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+  /* ===== Sections ===== */
+  section{padding:76px 0}
+  .sec-head{margin-bottom:44px}
+  .sec-head .kicker{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-3);font-weight:600}
+  .sec-head h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;letter-spacing:-.01em;margin-top:10px}
+  .sec-head p{color:var(--muted);margin-top:12px;max-width:620px}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:36px;align-items:start}
+  @media(max-width:820px){.about-grid{grid-template-columns:1fr}}
+  .about-grid p{color:var(--muted);margin-bottom:16px}
+  .about-grid p strong{color:var(--txt)}
+  .info-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+  .info-row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line);font-size:.94rem}
+  .info-row:last-child{border-bottom:0}
+  .info-row .k{color:var(--faint)}
+  .info-row .v{color:var(--txt);font-weight:500;text-align:right}
+
+  /* Experience timeline */
+  .timeline{position:relative;margin-left:8px}
+  .timeline::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--accent),var(--accent-2),transparent)}
+  .job{position:relative;padding:0 0 40px 44px}
+  .job::before{content:"";position:absolute;left:2px;top:6px;width:18px;height:18px;border-radius:50%;background:var(--bg);border:3px solid var(--accent-2);box-shadow:0 0 0 4px rgba(0,210,255,.12)}
+  .job .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;align-items:baseline}
+  .job h3{font-size:1.2rem;font-weight:700}
+  .job .co{color:var(--accent-2);font-weight:600}
+  .job .when{font-size:.85rem;color:var(--faint);white-space:nowrap}
+  .job ul{list-style:none;margin-top:14px;display:grid;gap:9px}
+  .job ul li{position:relative;padding-left:20px;color:var(--muted);font-size:.95rem}
+  .job ul li::before{content:"▹";position:absolute;left:0;color:var(--accent-3)}
+  .job.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;margin-left:0}
+  .job.card::before{display:none}
+
+  /* Skills */
+  .skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media(max-width:820px){.skill-grid{grid-template-columns:1fr}}
+  .skill-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:transform .25s,border-color .25s}
+  .skill-card:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .skill-card .ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-size:1.4rem;background:var(--grad);margin-bottom:16px}
+  .skill-card h4{font-size:1.1rem;margin-bottom:10px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .chip{font-size:.8rem;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--muted)}
+
+  /* Education */
+  .edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media(max-width:820px){.edu-grid{grid-template-columns:1fr}}
+  .edu-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;position:relative;overflow:hidden}
+  .edu-card::after{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:var(--grad)}
+  .edu-card .yr{font-size:.82rem;color:var(--accent-2);font-weight:600}
+  .edu-card h4{margin:8px 0 4px;font-size:1.05rem}
+  .edu-card .sub{color:var(--muted);font-size:.9rem}
+  .edu-card .loc{color:var(--faint);font-size:.82rem;margin-top:6px}
+
+  /* Contact */
+  .contact{text-align:center;background:var(--card-2);border:1px solid var(--line);border-radius:24px;padding:56px 28px;position:relative;overflow:hidden}
+  .contact::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(108,92,231,.22),transparent 60%)}
+  .contact h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;position:relative}
+  .contact p{color:var(--muted);max-width:520px;margin:14px auto 30px;position:relative}
+  .contact-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative}
+
+  footer{border-top:1px solid var(--line);padding:32px 0;text-align:center;color:var(--faint);font-size:.86rem}
+
+  /* Case study */
+  .cs{background:linear-gradient(160deg,var(--card),var(--card-2));border:1px solid var(--line);border-radius:24px;padding:38px;position:relative;overflow:hidden}
+  .cs::after{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:var(--grad)}
+  .cs-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:8px}
+  .cs-head h3{font-size:1.5rem;font-weight:800}
+  .cs-tag{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-2);border:1px solid var(--line);padding:6px 12px;border-radius:999px}
+  .cs-sub{color:var(--muted);margin-bottom:26px;font-size:.96rem}
+  .cs-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:30px}
+  @media(max-width:680px){.cs-metrics{grid-template-columns:1fr}}
+  .cs-metric{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .cs-metric .big{font-size:2rem;font-weight:850;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1}
+  .cs-metric .cap{font-size:.85rem;color:var(--muted);margin-top:8px}
+  .cs-metric .from{font-size:.78rem;color:var(--faint);margin-top:4px}
+  .chart-wrap{background:rgba(0,0,0,.2);border:1px solid var(--line);border-radius:14px;padding:20px 16px 12px}
+  .chart-wrap .clab{font-size:.82rem;color:var(--muted);margin-bottom:10px;display:flex;justify-content:space-between}
+  .cs-src{font-size:.78rem;color:var(--faint);margin-top:16px;text-align:right}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.show{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<div class="bg-fx" aria-hidden="true">
+  <div class="orb a"></div><div class="orb b"></div><div class="orb c"></div>
+</div>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">Shalva<span>.</span></div>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#results">Results</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+    </div>
+    <a href="#contact" class="nav-cta">Get in touch</a>
+    <button class="burger" onclick="document.querySelector('.navlinks').classList.toggle('open')" aria-label="menu">☰</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow reveal"><span class="dot"></span> Available for opportunities</div>
+    <h1 class="reveal">Shalva Janashvili<br><span class="accent-text">Digital Marketing Manager</span></h1>
+    <p class="role reveal">SEO &amp; paid-media specialist turning search intent and ad spend into measurable growth — Google Ads, Meta Ads, GA4, and content that ranks.</p>
+    <div class="hero-cta reveal">
+      <a href="#contact" class="btn primary">Let's work together</a>
+      <a href="#experience" class="btn ghost">View experience</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat reveal"><div class="num">+123%</div><div class="lbl">Organic traffic · Aversi Clinic (6 mo)</div></div>
+      <div class="stat reveal"><div class="num">956</div><div class="lbl">Keywords ranked in top 3</div></div>
+      <div class="stat reveal"><div class="num">66K</div><div class="lbl">Monthly organic visits driven</div></div>
+      <div class="stat reveal"><div class="num">6</div><div class="lbl">Brands &amp; companies served</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">01 — About</div>
+      <h2>Growth built on data, not guesswork</h2>
+    </div>
+    <div class="about-grid">
+      <div class="reveal">
+        <p>I'm a digital marketing professional based in Tbilisi, Georgia, focused on <strong>SEO, paid advertising, and analytics-driven growth</strong>. My work spans healthcare, travel, and media — from ranking high-intent service pages to running Google and Meta Ads campaigns optimized for cost-per-lead.</p>
+        <p>I combine <strong>technical SEO, PPC, and content strategy</strong> with rigorous measurement in GA4, Google Tag Manager, and Looker Studio, so every decision ties back to ROI. Recently I've paired this with AI tooling and automation to move faster without losing accuracy.</p>
+        <p>Currently leading digital marketing at <strong>Aversi Clinic</strong>, while studying Business Administration &amp; Marketing at Georgian International University.</p>
+      </div>
+      <div class="info-card reveal">
+        <div class="info-row"><span class="k">Location</span><span class="v">Tbilisi, Georgia</span></div>
+        <div class="info-row"><span class="k">Focus</span><span class="v">SEO · PPC · Analytics</span></div>
+        <div class="info-row"><span class="k">Current role</span><span class="v">Digital Marketing Manager</span></div>
+        <div class="info-row"><span class="k">Languages</span><span class="v">English · Georgian · Russian</span></div>
+        <div class="info-row"><span class="k">Email</span><span class="v">shakojanashvili6@gmail.com</span></div>
+        <div class="info-row"><span class="k">Phone</span><span class="v">+995 598 388 705</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" style="background:var(--bg-2)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">02 — Experience</div>
+      <h2>Where I've driven results</h2>
+      <p>A track record across clinics, travel, and media — building organic visibility and running performance campaigns end-to-end.</p>
+    </div>
+    <div class="timeline">
+
+      <div class="job reveal">
+        <div class="top">
+          <h3>Digital Marketing Manager <span class="co">· Aversi Clinic</span></h3>
+          <span class="when">Dec 2025 — Present</span>
+        </div>
+        <ul>
+          <li>Develop and execute SEO strategies targeting high-intent healthcare search queries to grow organic visibility.</li>
+          <li>Manage Google Ads &amp; Meta Ads campaigns driving patient inquiries and bookings, optimized for cost-per-lead.</li>
+          <li>Run keyword research and on-page + local SEO for medical service pages and blog content.</li>
+          <li>Analyze performance in GA4 and Google Tag Manager to produce data-driven insights that improve ROI.</li>
+          <li>Create compliant ad creatives and content aligned with healthcare audience needs.</li>
+        </ul>
+      </div>
+
+      <div class="job reveal">
+        <div class="top">
+          <h3>Digital Marketing Specialist <span class="co">· AVIA.GE</span></h3>
+          <span class="when">Jan 2025 — Dec 2025</span>
+        </div>
+        <ul>
+          <li>Improved organic visibility through on-page and technical SEO, optimizing site structure and content.</li>
+          <li>Managed Google Ads PPC campaigns during key booking phases to drive qualified traffic and conversions.</li>
+          <li>Built tracking with GTM and GA4 for deep insight into user behavior and booking trends.</li>
+          <li>Ran email marketing — personalized newsletters and offers to boost retention and repeat bookings.</li>
+          <li>Produced SEO content (blogs, travel tips, destination guides) positioning Avia.ge as an industry authority.</li>
+        </ul>
+      </div>
+
+      <div class="job reveal">
+        <div class="top">
+          <h3>Digital Marketing Specialist <span class="co">· Flyhelp.com</span></h3>
+          <span class="when">Feb 2025 — Dec 2025</span>
+        </div>
+        <ul>
+          <li>Launched acquisition, retention, and engagement campaigns across email, push, in-app, Google Ads, LinkedIn, and Meta.</li>
+          <li>Partnered with product, design, and copy teams to ship user-focused, high-impact messaging.</li>
+          <li>Refined audience targeting and content strategy using data-driven insights.</li>
+          <li>Monitored and reported CTR, ROAS, engagement, and conversions — optimizing on results.</li>
+        </ul>
+      </div>
+
+      <div class="job reveal">
+        <div class="top">
+          <h3>Digital Media Planner &amp; Advertiser <span class="co">· Adsocial.ge</span></h3>
+          <span class="when">May 2025 — Oct 2025</span>
+        </div>
+        <ul>
+          <li>Improved client search rankings via SEO-friendly guest posts across owned and partner websites.</li>
+          <li>Built and managed a network of high-authority sites to boost organic traffic and brand recognition.</li>
+          <li>Optimized client content for search while meeting industry and audience standards.</li>
+          <li>Tracked referral traffic and backlink performance, advising on improvements.</li>
+        </ul>
+      </div>
+
+      <div class="job reveal">
+        <div class="top">
+          <h3>Advertiser <span class="co">· Simple Step</span></h3>
+          <span class="when">Nov 2023 — Dec 2024</span>
+        </div>
+        <ul>
+          <li>Oversaw advertising campaigns and content to meet target-audience needs.</li>
+          <li>Collected and evaluated engagement data across acquisition efforts to inform future campaigns.</li>
+          <li>Built campaign variations from user-behavior data and managed reporting effectiveness.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="results">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">03 — Results</div>
+      <h2>Case study: Aversi Clinic SEO</h2>
+      <p>Owning organic search for one of Georgia's largest healthcare providers — the numbers below are pulled from Ahrefs over my tenure.</p>
+    </div>
+
+    <div class="cs reveal">
+      <div class="cs-head">
+        <h3>Organic search growth</h3>
+        <span class="cs-tag">Dec 2025 — Jul 2026</span>
+      </div>
+      <p class="cs-sub">Technical SEO, on-page optimization of medical service pages, local SEO, and content targeting high-intent healthcare queries.</p>
+
+      <div class="cs-metrics">
+        <div class="cs-metric">
+          <div class="big">+123%</div>
+          <div class="cap">Monthly organic traffic</div>
+          <div class="from">29.7K → 66.4K visits/mo (peak 68.9K)</div>
+        </div>
+        <div class="cs-metric">
+          <div class="big">+129%</div>
+          <div class="cap">Keywords ranking in top 3</div>
+          <div class="from">418 → 956 positions 1–3</div>
+        </div>
+        <div class="cs-metric">
+          <div class="big">+106%</div>
+          <div class="cap">Keywords ranking in top 10</div>
+          <div class="from">~1,068 → ~2,204</div>
+        </div>
+      </div>
+
+      <div class="chart-wrap">
+        <div class="clab"><span>Monthly organic traffic</span><span>Source: Ahrefs</span></div>
+        <svg viewBox="0 0 600 220" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Organic traffic growth chart">
+          <defs>
+            <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#00d2ff" stop-opacity="0.35"/>
+              <stop offset="100%" stop-color="#00d2ff" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#6c5ce7"/>
+              <stop offset="100%" stop-color="#00d2ff"/>
+            </linearGradient>
+          </defs>
+          <!-- gridlines -->
+          <g stroke="rgba(255,255,255,.06)" stroke-width="1">
+            <line x1="40" y1="30" x2="590" y2="30"/>
+            <line x1="40" y1="80" x2="590" y2="80"/>
+            <line x1="40" y1="130" x2="590" y2="130"/>
+            <line x1="40" y1="180" x2="590" y2="180"/>
+          </g>
+          <!-- area -->
+          <path d="M40,124 L117,81 L194,42 L271,23 L349,30 L426,23 L503,26 L580,29 L580,180 L40,180 Z" fill="url(#area)"/>
+          <!-- line -->
+          <polyline points="40,124 117,81 194,42 271,23 349,30 426,23 503,26 580,29" fill="none" stroke="url(#line)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- points -->
+          <g fill="#00d2ff">
+            <circle cx="40" cy="124" r="4"/><circle cx="117" cy="81" r="4"/><circle cx="194" cy="42" r="4"/><circle cx="271" cy="23" r="4"/><circle cx="349" cy="30" r="4"/><circle cx="426" cy="23" r="4"/><circle cx="503" cy="26" r="4"/><circle cx="580" cy="29" r="4"/>
+          </g>
+          <!-- x labels -->
+          <g fill="#6b7186" font-size="11" text-anchor="middle" font-family="sans-serif">
+            <text x="40" y="200">Dec</text><text x="117" y="200">Jan</text><text x="194" y="200">Feb</text><text x="271" y="200">Mar</text><text x="349" y="200">Apr</text><text x="426" y="200">May</text><text x="503" y="200">Jun</text><text x="580" y="200">Jul</text>
+          </g>
+          <!-- endpoint labels -->
+          <text x="40" y="116" fill="#9aa0b5" font-size="11" text-anchor="start" font-family="sans-serif">29.7K</text>
+          <text x="576" y="20" fill="#00d2ff" font-size="12" text-anchor="end" font-family="sans-serif" font-weight="700">66.4K</text>
+        </svg>
+      </div>
+      <div class="cs-src">Data: Ahrefs Site Explorer · aversiclinic.ge</div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" style="background:var(--bg-2)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">04 — Toolkit</div>
+      <h2>Skills &amp; platforms</h2>
+      <p>The stack I use to plan, launch, measure, and scale marketing.</p>
+    </div>
+    <div class="skill-grid">
+      <div class="skill-card reveal">
+        <div class="ic">📈</div>
+        <h4>Paid Media</h4>
+        <p style="color:var(--muted);font-size:.92rem">Full-funnel campaign management across search, social, and display.</p>
+        <div class="chips"><span class="chip">Google Ads</span><span class="chip">Meta Ads</span><span class="chip">LinkedIn Ads</span><span class="chip">DV360</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="ic">🔍</div>
+        <h4>SEO &amp; Content</h4>
+        <p style="color:var(--muted);font-size:.92rem">Technical, on-page, and local SEO plus content that ranks and converts.</p>
+        <div class="chips"><span class="chip">Technical SEO</span><span class="chip">Keyword Research</span><span class="chip">Local SEO</span><span class="chip">Surfer SEO</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="ic">📊</div>
+        <h4>Analytics &amp; Tracking</h4>
+        <p style="color:var(--muted);font-size:.92rem">Measurement setup and reporting that ties activity to ROI.</p>
+        <div class="chips"><span class="chip">GA4</span><span class="chip">Google Tag Manager</span><span class="chip">Looker Studio</span><span class="chip">MS Excel</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="ic">✉️</div>
+        <h4>Lifecycle &amp; CRM</h4>
+        <p style="color:var(--muted);font-size:.92rem">Email, push, and in-app campaigns for retention and engagement.</p>
+        <div class="chips"><span class="chip">Email Marketing</span><span class="chip">Push</span><span class="chip">In-app</span><span class="chip">Retention</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="ic">🤖</div>
+        <h4>AI &amp; Automation</h4>
+        <p style="color:var(--muted);font-size:.92rem">Leveraging AI tooling to move faster across content and workflows.</p>
+        <div class="chips"><span class="chip">ChatGPT</span><span class="chip">Claude</span><span class="chip">Gemini</span><span class="chip">Make.com</span><span class="chip">Midjourney</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="ic">🔗</div>
+        <h4>Off-page &amp; Media</h4>
+        <p style="color:var(--muted);font-size:.92rem">Link building, guest posting, and media planning for authority.</p>
+        <div class="chips"><span class="chip">Backlinks</span><span class="chip">Guest Posts</span><span class="chip">Media Planning</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">05 — Education</div>
+      <h2>Background &amp; training</h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <div class="yr">2024 — Present</div>
+        <h4>Business Administration &amp; Marketing</h4>
+        <div class="sub">Georgian International University</div>
+        <div class="loc">Tbilisi, Georgia</div>
+      </div>
+      <div class="edu-card reveal">
+        <div class="yr">2024</div>
+        <h4>Google Ads &amp; SEO</h4>
+        <div class="sub">Simple Step Academy</div>
+        <div class="loc">Tbilisi, Georgia</div>
+      </div>
+      <div class="edu-card reveal">
+        <div class="yr">2022</div>
+        <h4>Medical Physics &amp; Engineering</h4>
+        <div class="sub">Georgian Technical University</div>
+        <div class="loc">Tbilisi, Georgia</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact reveal">
+      <h2>Let's build something that grows</h2>
+      <p>Open to digital marketing roles and freelance projects in SEO, PPC, and analytics. Drop me a line — I reply fast.</p>
+      <div class="contact-links">
+        <a href="mailto:shakojanashvili6@gmail.com" class="btn primary">✉ Email me</a>
+        <a href="tel:+995598388705" class="btn ghost">📞 +995 598 388 705</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© <span id="yr"></span> Shalva Janashvili · Digital Marketing Manager · Tbilisi, Georgia</div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{ el.style.transitionDelay=(i%4*60)+'ms'; io.observe(el); });
+</script>
+</body>
+</html>
